@@ -16,9 +16,22 @@ Air Temperature data has also been pulled from [Taranaki Regional Council's](htt
 ## Dash framework
 A combination of ChatGPT and Gemini prompts have been used in the construction of the dashboards. It made getting a working framework up and running much quicker.
 
+Inspiration was also taken from @harrysdatajournery channel on youtube. He had a video showing a [multipage dashboard](https://www.youtube.com/watch?v=YU7bCEcsBK8). With the original four dashboards generated for this project, these dashboards are now combined into one `flask_app.py` file.
 
 ![dashboard](dashboard-heatmaps-barplots.png)
 
 ## Future work
 
-I want to get this dashboard running on a webserver, with automated tasks to check for new data. 
+1. Get this code running on a webserver. DONE - [pythonanywhere.com](https://www.pythonanywhere.com)
+2. Create automated tasks to check for new data, run `main.py` to update the datastores, and push changes to github
+3. Create scheduled task on pythonanywhere to pull changes from github and refresh the dashboard data.
+
+## Current Process
+
+1. Download daily files for hourly gas and electricity usage. These data are downloaded separately, and files are renamed to identify which is gas and which is electricity.
+2. Downloaded files are copied to a data folder within the python working directory.
+3. Within the python IDE (VSCode), `main.py` is run to update the datastores used by the dashboards.
+4. With the data updated, changes are committed in git, and pushed to the github repo.
+5. From a console in pythonanywhere, `git pull origin main` is run within the working directory
+6. The webservice is reloaded on pythonanywhere.
+7. Dashboards are reviewed
