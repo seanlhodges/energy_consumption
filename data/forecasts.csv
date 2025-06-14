@@ -1,0 +1,43 @@
+date,forecast,label,duration,value
+2025-05-12,Estimated weekly cost,,week,41.90
+2025-05-12,daily cost,,day,5.56
+2025-05-13,daily cost,,day,5.61
+2025-05-14,daily cost,,day,6.23
+2025-05-15,daily cost,,day,6.15
+2025-05-16,daily cost,,day,6.70
+2025-05-17,daily cost,,day,6.14
+2025-05-18,daily cost,,day,5.51
+2025-05-19,Estimated weekly cost,,week,37.65
+2025-05-19,daily cost,,day,5.34
+2025-05-20,daily cost,,day,5.15
+2025-05-21,daily cost,,day,5.78
+2025-05-22,daily cost,,day,5.91
+2025-05-23,daily cost,,day,4.70
+2025-05-24,daily cost,,day,5.16
+2025-05-25,daily cost,,day,5.61
+2025-05-26,Estimated weekly cost,,week,38.23
+2025-05-26,daily cost,,day,5.09
+2025-05-27,daily cost,,day,5.27
+2025-05-28,daily cost,,day,5.64
+2025-05-29,daily cost,,day,5.49
+2025-05-30,daily cost,,day,5.39
+2025-05-31,daily cost,,day,5.37
+2025-06-01,daily cost,,day,5.98
+2025-05-30,Estimated monthly bill,12 May to 10 Jun,month,260.35
+2025-05-26,daily cost,,day,5.09
+2025-05-27,daily cost,,day,5.27
+2025-05-28,daily cost,,day,5.64
+2025-05-29,daily cost,,day,5.49
+2025-05-30,daily cost,,day,5.39
+2025-05-31,daily cost,,day,5.37
+2025-06-01,daily cost,,day,5.98
+2025-06-10,Estimated monthly bill,12 May to 10 Jun,month,254.08
+2025-06-09,daily cost,,day,5.75
+2025-06-10,daily cost,,day,6.04
+2025-06-11,daily cost,,day,5.93
+2025-06-12,daily cost,,day,6.05
+2025-06-13,daily cost,,day,5.74
+2025-06-14,daily cost,,day,5.44
+2025-06-15,daily cost,,day,2.47
+2025-06-13,Estimated monthly bill,11 Jun to 12 Jul,month,283.53
+

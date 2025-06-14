@@ -1,0 +1,6 @@
+bill_period_label,month,bill_period_start,bill_period_end,supply-days,elec_usage,elec_cost,gas_usage,gas_cost,total_bill
+Kohi-tātea,January,15/01/25 0:00,7/02/25 23:00,25,244,111.58,184,79.06,190.64
+Hui-tanguru,February,8/02/25 0:00,9/03/25 23:00,30,277,,185,,
+Poutū-te-rangi,March,10/03/25 0:00,7/04/25 23:00,,,,,,
+Paenga-whāwhā,April,8/04/25 0:00,11/05/25 23:00,,,,,,
+Haratua,May,12/05/25 0:00,10/06/25 23:00,,,,,,
