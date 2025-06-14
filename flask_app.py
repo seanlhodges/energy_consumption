@@ -25,8 +25,8 @@ navbar = dbc.NavbarSimple(
 footer = dbc.Container(
     dbc.Row(
         [
-            dbc.Col(html.A("Sean Hodges | GitHub", href="https://github.com/seanlhodges/genesisenergy"), align="left"),
-        ],
+            dbc.Col(html.A("Sean Hodges | GitHub", href="https://github.com/seanlhodges/energy_consumption"), align="left"),
+            dbc.Col(html.A("Powered by Dash", href="https://plotly.com/dash/"), align="right"),],
     ),
     className="footer",
     fluid=True,
@@ -36,7 +36,7 @@ footer = dbc.Container(
 app.layout = html.Div([
     navbar,  # Include the navigation bar
     dash.page_container,
-#    footer,  # Include the footer
+    footer,  # Include the footer
 ])
     
 

@@ -23,23 +23,14 @@ navbar = dbc.NavbarSimple(
 footer = dbc.Container(
     dbc.Row(
         [
-            dbc.Col(html.A("Sean Hodges | GitHub", href="https://github.com/seanlhodges/genesisenergy"), align="left"),
+            dbc.Col(html.A("Sean Hodges | GitHub", href="https://github.com/seanlhodges/energy_consumption"), align="left"),
         ],
     ),
     className="footer",
     fluid=True,
 )
 
-
-#app.layout = html.Div([
-    # html.H1('Energy usage views'),
-    # html.Div([
-    #     html.Div(
-    #         dcc.Link(f"{page['name']} - {page['path']}", href=page["relative_path"])
-    #     ) for page in dash.page_registry.values()
-    # ]),
-    #dash.page_container
-# ])
+# Define the layout of the app
 app.layout = html.Div([
     navbar,  # Include the navigation bar
     dash.page_container,
