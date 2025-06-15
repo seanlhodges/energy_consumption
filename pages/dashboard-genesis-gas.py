@@ -86,7 +86,7 @@ dash.register_page(__name__)
 
 # --- App Layout ---
 layout = dbc.Container([
-    html.H3("Gas Usage & Cost Dashboard", className="text-center my-4"),
+    html.H3("Gas Usage & Cost", className="text-center my-4"),
 
     dbc.Tabs(id="gas-tabs", active_tab='gas-monthly-tab', children=[
         dbc.Tab(label='Monthly View', tab_id='gas-monthly-tab'),
@@ -185,7 +185,7 @@ def update_graph(active_tab, selected_year_data, selected_month_data, selected_d
                                   'yanchor': 'top'},
                             title_font=dict(family="Arial", size=30, weight="bold"),
                             xaxis_title="Month", 
-                            yaxis_title="Total", 
+                            yaxis_title="Total (kWh)", 
                             legend_title="Metric",
                             clickmode='event+select')
 
@@ -240,7 +240,7 @@ def update_graph(active_tab, selected_year_data, selected_month_data, selected_d
                                   'yanchor': 'top'},
                               title_font=dict(family="Arial", size=30, weight="bold"),
                               xaxis_title="Date", 
-                              yaxis_title="Total", 
+                              yaxis_title="Total (kWh)", 
                               yaxis_range=[0, max_daily_usage], 
                               legend_title="Metric")
             
@@ -286,7 +286,7 @@ def update_graph(active_tab, selected_year_data, selected_month_data, selected_d
                                   'yanchor': 'top'},
                               title_font=dict(family="Arial", size=30, weight="bold"),
                               xaxis_title="Hour of Day", 
-                              yaxis_title="Total", 
+                              yaxis_title="Total (kWh)", 
                               yaxis_range=[0, max_usage], 
                               legend_title="Metric")
             

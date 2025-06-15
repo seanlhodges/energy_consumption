@@ -71,8 +71,15 @@ df_events['Timestamp'] = pd.to_datetime(df_events['Timestamp'])
 
 # Enrich events with runtime and kWh estimates
 program_details = {
+    "Pots / Pans": {"kWh": 1.35, "runtime": "2:15"},
+    "Auto Gentle": {"kWh": 0.75, "runtime": "1:45"},
+    "Pre-rinse": {"kWh": 1.1, "runtime": "1:00"},
+    "Quick Wash and Dry": {"kWh": 0.85, "runtime": "0:45"},
     "Auto Wash": {"kWh": 1.15, "runtime": "2:30"},
-    "Eco Wash": {"kWh": 0.6, "runtime": "3:15"}
+    "Eco Wash": {"kWh": 0.6, "runtime": "3:15"},
+    "Quick 1h": {"kWh": 0.6, "runtime": "1:05"},
+    "Machine Care": {"kWh": 1.5, "runtime": "2:10"},
+    "Short 60C": {"kWh": 1.05, "runtime": "1:29"},
 }
 
 df_events['kWh'] = df_events['Program'].map(lambda x: program_details.get(x, {"kWh": 1})['kWh'])
