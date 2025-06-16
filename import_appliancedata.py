@@ -11,7 +11,7 @@ program_metadata = {
     "Auto Wash":      {"duration": timedelta(hours=2, minutes=30), "kWh": 1.15},
     "Auto Gentle":       {"duration": timedelta(hours=1, minutes=45), "kWh": 0.75},
     "Pre-rinse":       {"duration": timedelta(hours=1, minutes=0), "kWh": 1.1},
-    "Quick 1h":       {"duration": timedelta(hours=3, minutes=15), "kWh": 0.6},
+    "Quick 1h":       {"duration": timedelta(hours=3, minutes=15), "kWh": 1.15},
     "Eco Wash":     {"duration": timedelta(hours=3, minutes=15), "kWh": 0.6},
     "Machine Care": {"duration": timedelta(hours=2, minutes=10), "kWh": 1.5},
     "Short 60C":       {"duration": timedelta(hours=1, minutes=29), "kWh": 1.05},

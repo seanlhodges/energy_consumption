@@ -77,7 +77,7 @@ program_details = {
     "Quick Wash and Dry": {"kWh": 0.85, "runtime": "0:45"},
     "Auto Wash": {"kWh": 1.15, "runtime": "2:30"},
     "Eco Wash": {"kWh": 0.6, "runtime": "3:15"},
-    "Quick 1h": {"kWh": 0.6, "runtime": "1:05"},
+    "Quick 1h": {"kWh": 1.15, "runtime": "1:05"},
     "Machine Care": {"kWh": 1.5, "runtime": "2:10"},
     "Short 60C": {"kWh": 1.05, "runtime": "1:29"},
 }

@@ -23,7 +23,7 @@ Inspiration was also taken from @harrysdatajournery channel on youtube. He had a
 ## Future work
 
 1. Get this code running on a webserver. DONE - [pythonanywhere.com](https://www.pythonanywhere.com)
-2. Create automated tasks to check for new data, run `main.py` to update the datastores, and push changes to github
+2. Create automated tasks to check for new data, run `main.py` to update the datastores, and push changes to github (`pip install GitPython`)
 3. Create scheduled task on pythonanywhere to pull changes from github and refresh the dashboard data.
 
 ## Current Process
