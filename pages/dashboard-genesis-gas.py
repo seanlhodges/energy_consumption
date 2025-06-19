@@ -387,7 +387,7 @@ def drilldown(clickData, prev_clicks, next_clicks, active_tab,
     elif trigger_id in ['gas-prev-day', 'gas-next-day']:
         if date_data and date_data.get('date'):
             current_date = pd.to_datetime(date_data['date'])
-            delta = -1 if trigger_id == 'prev-day' else 1
+            delta = -1 if trigger_id == 'gas-prev-day' else 1
             new_date = (current_date + pd.Timedelta(days=delta)).strftime('%Y-%m-%d')
             date_data = {'date': new_date}
             new_active_tab = 'gas-hourly-tab' # Stay on the hourly tab
