@@ -20,6 +20,7 @@ MEASUREMENT = 'Air Temperature (Continuous)'
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 STORE_PATH = "electricity_usage.parquet"
 STORE_PATH_GAS = "gas_usage.parquet"
+STORE_BILLING = "billing_periods.csv"
 METADATA_PATH = "metadata.json"
 folder_path = "/Users/shodges/scripts/energy_consumption/data"
 if 'CONDA_DEFAULT_ENV' in os.environ:
@@ -113,6 +114,7 @@ def check_electricity_data():
         if not new_df.empty:
             new_df = enrich_datetime_info(new_df)
             new_df = assign_dayparts(new_df)
+            new_df = assign_billMonths(new_df)
             new_df = clean_usage_data(new_df)
 
             # Merge with previous data if exists
@@ -157,6 +159,7 @@ def check_gas_data():
         if not new_df.empty:
             new_df = enrich_datetime_info(new_df)
             new_df = assign_dayparts(new_df)
+            new_df = assign_billMonths(new_df)
             new_df = clean_usage_data(new_df)
 
             # Merge with previous data if exists
@@ -292,6 +295,44 @@ def assign_dayparts(df):
     df.loc[df.between_time('20:00', '23:59').index, 'd_time1'] = 'Po'
 
     return df.reset_index()
+
+def assign_billMonths(df):
+    if 'index' not in df.columns:
+        raise KeyError("'index' column is required in the DataFrame.")
+    
+    df = df.copy()
+    # df = df.set_index('datetime')
+    # df.index.name = None  # Remove name to prevent KeyError
+    df['billMonth'] = None
+    
+    file_path = DOWNLOADS_FOLDER + "/" + STORE_BILLING
+
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"Billing periods file not found: {file_path}")
+    else:
+        df_bill = pd.read_csv(file_path)
+
+    df_bill['start_date'] = pd.to_datetime(df_bill['bill_period_start'])
+    df_bill['end_date'] = pd.to_datetime(df_bill['bill_period_end']).dt.normalize()
+    df_bill['duration'] = (df_bill['end_date'] - df_bill['start_date']).dt.days+1
+    
+    max_day = df['index'].max()
+    current_bill_start_date = df_bill['start_date'].max()
+    var=max_day-current_bill_start_date+ timedelta(days=1)
+    df_bill['days'] = var.days
+    df_bill['relative_current_dates'] = df_bill["start_date"]+ timedelta(days=var.days-1)
+ 
+    for i in range(len(df_bill)):
+        start_date = df_bill['start_date'].iloc[i]
+        end_date = df_bill['relative_current_dates'].iloc[i] + timedelta(days=1)  # Include the end date in the range
+        
+        # Filter data for the current billing period
+        df.loc[(df['index'] >= start_date) & (df['index'] < end_date), 'billMonth'] = df_bill['month'].iloc[i]
+        recs = len(df.loc[(df['index'] >= start_date) & (df['index'] < end_date), 'billMonth'])
+        if recs > 0:
+            print(f"   - Assigning bill month {df_bill['month'].iloc[i]} to {recs} rows")
+        
+    return df
 
 
 def clean_usage_data(df):
