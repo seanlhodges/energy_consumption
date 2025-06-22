@@ -125,6 +125,13 @@ def check_electricity_data():
                 df = new_df
 
             df.sort_values(by='index', ascending=True, inplace=True)
+                        
+            # Assign bill months as a last step as it needs to be done after all data is merged
+            # as every month needs to be updated based on the number of billing days represented
+            # in the most current month. It also acknowledges that billing days gets reset every month.
+            df = assign_billMonths(df)            
+
+
             df.to_parquet(STORE_PATH, index=False)
             metadata["processed_files_electricity"].extend(new_electricity_files)
             #df.to_csv("new_data.csv", index=False)
@@ -170,6 +177,12 @@ def check_gas_data():
                 df = new_df
 
             df.sort_values(by='index', ascending=True, inplace=True)
+            
+            # Assign bill months as a last step as it needs to be done after all data is merged
+            # as every month needs to be updated based on the number of billing days represented
+            # in the most current month. It also acknowledges that billing days gets reset every month.
+            df = assign_billMonths(df)
+            
             df.to_parquet(STORE_PATH_GAS, index=False)
             metadata["processed_files_gas"].extend(new_gas_files)
             #df.to_csv("new_data.csv", index=False)
