@@ -13,6 +13,7 @@ navbar = dbc.NavbarSimple(
         dbc.NavItem(dbc.NavLink("Genesis Electricity", href="/dashboard-genesis")),
         dbc.NavItem(dbc.NavLink("Genesis Gas", href="/dashboard-genesis-gas")),
         dbc.NavItem(dbc.NavLink("Heatmaps", href="/dashboard-heatmap")),
+        dbc.NavItem(dbc.NavLink("Running totals", href="/monthly_running_total")),
         dbc.NavItem(dbc.NavLink("Compare weekdays", href="/selected-weekday-history")),
     ],
     brand="Energy Usage Dashboard",
