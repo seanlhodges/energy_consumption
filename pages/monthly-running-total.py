@@ -85,8 +85,8 @@ dash.register_page(__name__)
 # app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 # app.title = "Running Total of Electricity Usage and Cost"
 layout = dbc.Container([
-    html.H3("Electricity Summary by Billing Month"),
-    html.P("Based on billing days for each period."),
+    html.H3("Electricity Summary by Billing Month", className="text-center my-4"),
+    html.H5("Based on billing days for each period.", className="text-center my-4"),
     dcc.Graph(figure=fig_running_usage),
     dcc.Graph(figure=fig_running_cost),
     dcc.Graph(figure=fig_cost_stacked)
