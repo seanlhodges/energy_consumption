@@ -93,7 +93,7 @@ df_events['Month'] = df_events['Timestamp'].dt.month
 # Layout
 # -------------------------
 layout = dbc.Container([
-    html.H3("Power & Gas Usage", className="text-center mb-4"),
+    html.H3("Power & Gas Usage", className="text-center my-4"),
 
     dcc.Dropdown(
         id="slct_month",
