@@ -26,6 +26,8 @@ A combination of ChatGPT and Gemini prompts have been used in the construction o
 
 Inspiration was also taken from @harrysdatajournery channel on youtube. He had a video showing a [multipage dashboard](https://www.youtube.com/watch?v=YU7bCEcsBK8). With the original four dashboards generated for this project, these dashboards are now combined into one `flask_app.py` file.
 
+![dashboard](https://github.com/seanlhodges/energy_consumption/blob/main/dashboard-heatmaps-barplots.png)
+
 ##### Future work
 
 1. Get this code running on a webserver. DONE - [pythonanywhere.com](https://www.pythonanywhere.com)
