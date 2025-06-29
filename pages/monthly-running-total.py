@@ -14,12 +14,20 @@ pio.templates.default = "plotly_dark"
 df = pd.read_parquet("electricity_usage.parquet")  # Replace with actual file path
 df['billMonth'] = df['billMonth'].astype(str)
 df['hour']= df['index'].dt.hour#.astype(str)
+
+# last billMonth value in dataframe
+last_bill_month = df['billMonth'].iloc[-1] if not df.empty else 'None'
+
+# Filter out rows where billMonth is 'None'
 df_stacked = df[df['billMonth']!='None'].copy()
+
 # Group and summarise by billing month
 summary = df.groupby('billMonth', as_index=False).agg({
     'usage': 'sum',
-    'dollars': 'sum'
+    'dollars': 'sum',
+    'YYYYMMDD': 'nunique'  # Assuming this is the date column
 })
+bill_days = summary[summary['billMonth']==last_bill_month]['YYYYMMDD'].values[0] if not summary.empty else 0
 
 # Sort by month if billMonth has consistent format (e.g. Jan, Feb...)
 month_order = [
@@ -31,29 +39,50 @@ summary = summary.sort_values('billMonth')
 
 # Create bar charts
 fig_running_usage = px.bar(
-    summary,
+    summary[summary['billMonth']!=last_bill_month],
     x='usage',
     y='billMonth',
     orientation='h',
     labels={'usage': 'kWh', 'billMonth': 'Billing Month'},
-    title='Electricity Usage (kWh) by Billing Month',
+    title=f'{bill_days} days of Electricity Usage (kWh) for each Billing Month',
     text='usage',
     text_auto=True
 )
 fig_running_usage.update_traces(marker_color='orange')
+
+fig_running_usage.add_trace(px.bar(
+    summary[summary['billMonth']==last_bill_month],
+    x='usage',
+    y='billMonth',
+    color_discrete_sequence=["#FAFAD2"],  # Light goldenrod yellow),
+    text='usage',
+    text_auto=True
+).data[0]) #.update_traces(marker_color='lightgoldenrodyellow')  # Add last month as a separate trace
+
+
 fig_running_usage.update_layout(xaxis_range=[0, 400])  # Set max to 400 kWh
 
 fig_running_cost = px.bar(
-    summary,
+    summary[summary['billMonth']!=last_bill_month],
     x='dollars',
     y='billMonth',
     orientation='h',
     labels={'dollars': 'NZD', 'billMonth': 'Billing Month'},
-    title='Electricity Cost (NZD) by Billing Month',
+    title=f'{bill_days} days of Electricity Cost (NZD) for each Billing Month',
     text='dollars',
     text_auto=True
 )
 fig_running_cost.update_traces(marker_color='orange')
+
+fig_running_cost.add_trace(px.bar(
+    summary[summary['billMonth']==last_bill_month],
+    x='dollars',
+    y='billMonth',
+    color_discrete_sequence=["#FAFAD2"],  # Light goldenrod yellow),
+    text='usage',
+    text_auto=True
+).data[0]) #.update_traces(marker_color='lightgoldenrodyellow')  # Add last month as a separate trace
+
 
 fig_running_cost.update_layout(
     xaxis_range=[0, 150],
@@ -68,7 +97,7 @@ fig_cost_stacked = px.bar(
     color='hour',
     orientation='h',
     labels={'dollars': 'NZD', 'billMonth': 'Billing Month'},
-    title='Electricity Cost (NZD) by Billing Month',
+    title=f'{bill_days} days of Electricity Cost (NZD) for each Billing Month',
     # text='dollars',
     # text_auto=True
 )
@@ -79,6 +108,7 @@ fig_cost_stacked.update_layout(
     xaxis_tickprefix='$', 
     xaxis_tickformat=',.2f'
 )
+
 
 dash.register_page(__name__)
 
