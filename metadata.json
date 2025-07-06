@@ -170,7 +170,8 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 2nd July 2025 to 11_59PM 2nd July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 1st July 2025 to 11_59PM 1st July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 3rd July 2025 to 11_59PM 3rd July 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 4th July 2025 to 11_59PM 4th July 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 4th July 2025 to 11_59PM 4th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 5th July 2025 to 11_59PM 5th July 2025.csv"
     ],
     "processed_files_gas": [
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th March 2025 to 11_59PM 15th March 2025.csv",
@@ -344,8 +345,9 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 1st July 2025 to 11_59PM 1st July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 2nd July 2025 to 11_59PM 2nd July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 3rd July 2025 to 11_59PM 3rd July 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 4th July 2025 to 11_59PM 4th July 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 4th July 2025 to 11_59PM 4th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 5th July 2025 to 11_59PM 5th July 2025.csv"
     ],
-    "last_datetime_electricity": "2025-07-04T23:00:00",
-    "last_datetime_gas": "2025-07-04T23:00:00"
+    "last_datetime_electricity": "2025-07-05T23:00:00",
+    "last_datetime_gas": "2025-07-05T23:00:00"
 }
