@@ -85,7 +85,7 @@ fig_running_cost.add_trace(px.bar(
 
 
 fig_running_cost.update_layout(
-    xaxis_range=[0, 150],
+    xaxis_range=[0, 200],
     xaxis_tickprefix='$', 
     xaxis_tickformat=',.2f'
 )
@@ -104,7 +104,7 @@ fig_cost_stacked = px.bar(
 
 fig_cost_stacked.update_traces(marker_line_width=0)
 fig_cost_stacked.update_layout(
-    xaxis_range=[0, 150],  # Set max to 150 NZD
+    xaxis_range=[0, 200],  # Set max to 150 NZD
     xaxis_tickprefix='$', 
     xaxis_tickformat=',.2f'
 )
