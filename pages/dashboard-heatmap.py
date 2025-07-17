@@ -8,7 +8,8 @@ import plotly.graph_objects as go
 import calendar
 from datetime import datetime, timedelta
 import plotly.io as pio
-from data_utils import check_forecast_electricty_data
+from data_utils import (check_forecast_electricty_data,
+                        get_bill_period_start_date)
 
 # Set dark theme
 pio.templates.default = "plotly_dark"
@@ -21,7 +22,8 @@ dash.register_page(__name__)
 # -------------------------
 # Variables
 # -------------------------
-bill_period_start = datetime.strptime("2025-06-11","%Y-%m-%d").date()  # Example bill period start date
+# bill_period_start = datetime.strptime("2025-07-13","%Y-%m-%d").date()  # Example bill period start date
+bill_period_start = get_bill_period_start_date().date()
 
 # -------------------------
 # Load and process data

@@ -347,6 +347,17 @@ def assign_billMonths(df):
         
     return df
 
+def get_bill_period_start_date():
+    file_path = DOWNLOADS_FOLDER + "/" + STORE_BILLING
+
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"Billing periods file not found: {file_path}")
+    else:
+        df_bill = pd.read_csv(file_path)
+
+    df_bill['start_date'] = pd.to_datetime(df_bill['bill_period_start'])
+    
+    return df_bill['start_date'].max()
 
 def clean_usage_data(df):
     df[['usage', 'units']] = df['usage'].str.split(' ', expand=True)
