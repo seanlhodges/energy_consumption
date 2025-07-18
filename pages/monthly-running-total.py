@@ -10,10 +10,21 @@ import plotly.io as pio
 # Set dark theme
 pio.templates.default = "plotly_dark"
 
-# Load your parquet file
+# Load electricty parquet file
 df = pd.read_parquet("electricity_usage.parquet")  # Replace with actual file path
 df['billMonth'] = df['billMonth'].astype(str)
 df['hour']= df['index'].dt.hour#.astype(str)
+df['source'] = 'Electricity'
+df_electricity = df.copy()
+
+# # Load gas parquet file
+# df = pd.read_parquet("gas_usage.parquet")  # Replace with actual file path
+# df['billMonth'] = df['billMonth'].astype(str)
+# df['hour']= df['index'].dt.hour#.astype(str)
+# df['source'] = 'Gas'
+# df_gas = df.copy()
+
+# df = pd.concat([df_electricity,df_gas])
 
 # last billMonth value in dataframe
 last_bill_month = df['billMonth'].iloc[-1] if not df.empty else 'None'
@@ -22,7 +33,7 @@ last_bill_month = df['billMonth'].iloc[-1] if not df.empty else 'None'
 df_stacked = df[df['billMonth']!='None'].copy()
 
 # Group and summarise by billing month
-summary = df.groupby('billMonth', as_index=False).agg({
+summary = df.groupby(['source','billMonth'], as_index=False).agg({
     'usage': 'sum',
     'dollars': 'sum',
     'YYYYMMDD': 'nunique'  # Assuming this is the date column
@@ -44,7 +55,7 @@ fig_running_usage = px.bar(
     y='billMonth',
     orientation='h',
     labels={'usage': 'kWh', 'billMonth': 'Billing Month'},
-    title=f'{bill_days} days of Electricity Usage (kWh) for each Billing Month',
+    title=f'{bill_days} days of Energy Usage (kWh) for each Billing Month',
     text='usage',
     text_auto=True
 )
