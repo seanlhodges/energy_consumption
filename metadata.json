@@ -184,7 +184,11 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 15th July 2025 to 11_59PM 15th July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 16th July 2025 to 11_59PM 16th July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 17th July 2025 to 11_59PM 17th July 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 18th July 2025 to 11_59PM 18th July 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 18th July 2025 to 11_59PM 18th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 21st July 2025 to 11_59PM 21st July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 20th July 2025 to 11_59PM 20th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 22nd July 2025 to 11_59PM 22nd July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 19th July 2025 to 11_59PM 19th July 2025.csv"
     ],
     "processed_files_gas": [
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th March 2025 to 11_59PM 15th March 2025.csv",
@@ -372,8 +376,12 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th July 2025 to 11_59PM 15th July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 16th July 2025 to 11_59PM 16th July 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 17th July 2025 to 11_59PM 17th July 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 18th July 2025 to 11_59PM 18th July 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 18th July 2025 to 11_59PM 18th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 19th July 2025 to 11_59PM 19th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 22nd July 2025 to 11_59PM 22nd July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 20th July 2025 to 11_59PM 20th July 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 21st July 2025 to 11_59PM 21st July 2025.csv"
     ],
-    "last_datetime_electricity": "2025-07-18T23:00:00",
-    "last_datetime_gas": "2025-07-18T23:00:00"
+    "last_datetime_electricity": "2025-07-22T23:00:00",
+    "last_datetime_gas": "2025-07-22T23:00:00"
 }
