@@ -50,6 +50,7 @@ df_gas['USAGE_COST'] = df_gas['dollars']
 
 elec_daily_fixed_charge = 0.90 # 90 cents per day
 gas_daily_fixed_charge = 1.5847 # 158.47 cents per day
+gas_daily_fixed_charge = 1.96 # 8c per hour = 196 cents per day
 
 forecast = check_forecast_electricty_data()
 # Access the monthly forecast
