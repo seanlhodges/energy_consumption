@@ -215,7 +215,14 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 15th August 2025 to 11_59PM 15th August 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 16th August 2025 to 11_59PM 16th August 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 17th August 2025 to 11_59PM 17th August 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 18th August 2025 to 11_59PM 18th August 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 18th August 2025 to 11_59PM 18th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 21st August 2025 to 11_59PM 21st August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 20th August 2025 to 11_59PM 20th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 23rd August 2025 to 11_59PM 23rd August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 19th August 2025 to 11_59PM 19th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 25th August 2025 to 11_59PM 25th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 24th August 2025 to 11_59PM 24th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - My Hourly Usage From 12_00AM 22nd August 2025 to 11_59PM 22nd August 2025.csv"
     ],
     "processed_files_gas": [
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th March 2025 to 11_59PM 15th March 2025.csv",
@@ -434,8 +441,15 @@
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 18th August 2025 to 11_59PM 18th August 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 17th August 2025 to 11_59PM 17th August 2025.csv",
         "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 16th August 2025 to 11_59PM 16th August 2025.csv",
-        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th August 2025 to 11_59PM 15th August 2025.csv"
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 15th August 2025 to 11_59PM 15th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 19th August 2025 to 11_59PM 19th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 23rd August 2025 to 11_59PM 23rd August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 24th August 2025 to 11_59PM 24th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 25th August 2025 to 11_59PM 25th August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 22nd August 2025 to 11_59PM 22nd August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 21st August 2025 to 11_59PM 21st August 2025.csv",
+        "/Users/shodges/scripts/energy_consumption/data/Genesis Energy - Hourly Gas Usage From 12_00AM 20th August 2025 to 11_59PM 20th August 2025.csv"
     ],
-    "last_datetime_electricity": "2025-08-18T23:00:00",
-    "last_datetime_gas": "2025-08-18T23:00:00"
+    "last_datetime_electricity": "2025-08-25T23:00:00",
+    "last_datetime_gas": "2025-08-25T23:00:00"
 }
